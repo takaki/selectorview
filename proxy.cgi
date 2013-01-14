@@ -3,7 +3,7 @@
 import cgi
 import cgitb
 import urllib.request
-import lxml
+from lxml import etree
 import sys
 
 form = cgi.FieldStorage()
