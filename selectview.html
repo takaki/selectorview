@@ -5,17 +5,21 @@
   <script src="https://raw.github.com/jfirebaugh/jquery-xpath/master/jquery.xpath.js"></script>
   <script src="markup.js"></script>
   <body>
-    <input  id="url_input" type="text" size="40" value="http://www.google.com/" />
+    <label>URL</label>
+    <input  id="url_input" type="text" size="40" 
+	    value="" />
+    <label>Link convert(buggy)</label><input id="convert" type="checkbox" />
     <button id="reload">Load Page</button>
     <input type="radio" name="type" value="css" checked="checked" />
     <label>CSS</label>
     <input type="radio" name="type" value="xpath" /> <label>XPath </label>
     <input  id="selector_input" type="text" size="40" value="" />
     <iframe id="target" width="100%"  height="90%"  
+	    src="demo.html" />
+    <!-- 
 	    src="proxy.cgi?url=http://kensetsu.ipros.jp/company/" />
-	    <!--
-	    src="wrap.cgi?url=http://www.example.org/" />
-	    -->
+	    src="proxy.cgi?url=http://www.google.com/" />
+	    src="proxy.cgi?url=http://www.example.org/" /> -->
   </body>
 </html>
     

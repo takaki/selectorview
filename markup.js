@@ -32,7 +32,10 @@ $(function(){
 
     $('#reload').click(function(){
 	var url = $('#url_input').val();
-	var iframe_url = proxy + '?' + $.param([{name:'url',value: url}])
+	var iframe_url = proxy + '?' + $.param([
+	    {name:'url',value: url},
+	    {name:'convert', value: $('#convert').attr('checked')}
+	]);
 	$('#target').attr('src', iframe_url);
 	$('#target').each(function(){
 	    $(this).contentWindow.location.reload(true);
