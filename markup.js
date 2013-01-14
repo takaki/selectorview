@@ -1,21 +1,12 @@
 var wrap = 'wrap.cgi'
 
 $(function(){
-    var prev;
     function selector_apply(s){
-	console.log("css =>", s);
-	try{
-	    var target = $('#target').contents().find(prev)
-	    with(target){
-		css("background", "");
-		css("border", "");
-	    }
-
-	} catch(e) {
-	    console.log("prev", e);
+	var target = $('#target').contents().find('*')
+	with(target){
+	    css("background", "");
+	    css("border", "");
 	}
-	console.log('no prev error');
-	prev = s;
 	try{
 	    console.log('find', s);
 	    var target = $('#target').contents().find(s);
@@ -24,30 +15,28 @@ $(function(){
 		css("border", "solid 2px red");
 	    }
 	} catch(e) {
-	    console.log("new", e);
+	    if(!console.log("??", e instanceof Error)){
+		throw e;
+	    }
 	}
     };	
     function xpath_apply(s){
 	console.log("xpath =>", s);
-	try{
-	    var target = ('#target').contents().xpath(prev)
-	    with(target){
-		css("background", "");
-		css("border", "");
-	    }
-	} catch(e) {
-	    // console.log("prev", e);
+	var target = $('#target').contents().find('*');
+	with(target){
+	    css("background", "");
+	    css("border", "");
 	}
-	prev = s;
 	try{
-	    console.log('find', s);
 	    var target = $('#target').contents().xpath(s);
 	    with(target){
 		css("background", "#c88");
 		css("border", "solid 2px red");
 	    }
 	} catch(e) {
-	    // console.log("new", e);
+	    if (e.name != "INVALID_EXPRESSION_ERR"){
+		throw e;
+	    }
 	}
     };	
 
