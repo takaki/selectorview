@@ -1,0 +1,22 @@
+<html>
+  <head></head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+  </script>
+  <script src="https://raw.github.com/jfirebaugh/jquery-xpath/master/jquery.xpath.js"></script>
+  <script src="markup.js"></script>
+  <body>
+    <input  id="url_input" type="text" size="40" value="http://www.google.com/" />
+    <button id="reload">Load!</button>
+
+    <label>selector</label>
+    <input  id="selector_input" type="text" size="40" value="" />
+    <label>xpath</label>
+    <input  id="xpath_input" type="text" size="40" value="" />
+    <iframe id="target" width="100%"  height="90%"  
+	    src="wrap.cgi?url=http://kensetsu.ipros.jp/company/" />
+	    <!--
+	    src="wrap.cgi?url=http://www.example.org/" />
+	    -->
+  </body>
+</html>
+    
