@@ -1,0 +1,15 @@
+Selector View
+
+  * online CSS and XPath selector checker
+
+Install
+
+  * Copy files to your Web server.
+  * You must have a right to exec CGI.
+
+
+LICENSE
+
+  Copyright (c) 2013 TANIGUCHI Takaki <takaki@asis.media-as.org>
+
+  GNU GPL version 3 or later
