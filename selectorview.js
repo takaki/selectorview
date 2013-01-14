@@ -26,8 +26,7 @@ $(function(){
 
     $('#selector_input').bind('click blur keydown keyup keypress change',
 			      function(){
-				  var selector = $(this).val();
-				  selector_apply(selector);
+                                  alert('disabled by security reason');
 			      });
 
     $('#reload').click(function(){
